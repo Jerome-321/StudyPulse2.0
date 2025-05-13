@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>STUDYPULSE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg: linear-gradient(145deg, #f5f6fa, #eef1f7);
+      --card: #ffffff;
+      --shadow-light: rgba(255, 255, 255, 0.8);
+      --shadow-dark: rgba(0, 0, 0, 0.05);
+      --primary: #4f46e5;
+      --text: #2f2f2f;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    nav {
+      position: fixed;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 20px var(--shadow-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 100;
+    }
+
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-menu li a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: 0.2s;
+    }
+
+    .nav-menu li a:hover {
+      color: var(--primary);
+    }
+
+    section {
+      padding: 100px 20px;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .section-desc {
+      font-size: 1rem;
+      color: #555;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    /* Login Section */
+    #login .login-card {
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 2rem;
+      box-shadow: 10px 10px 25px var(--shadow-dark), -10px -10px 25px var(--shadow-light);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+
+    #login input {
+      width: 100%;
+      padding: 0.9rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 1rem;
+      background: #f0f2f5;
+      box-shadow: inset 2px 2px 5px #d1d9e6, inset -2px -2px 5px #ffffff;
+    }
+
+    #login button {
+      width: 100%;
+      padding: 0.9rem;
+      border: none;
+      border-radius: 1rem;
+      background: var(--primary);
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 0 6px 20px rgba(79, 70, 229, 0.3);
+      cursor: pointer;
+    }
+
+    /* Portfolio Section */
+    #contact .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .portfolio-card {
+      background: var(--card);
+      border-radius: 1.5rem;
+      padding: 1rem;
+      box-shadow: 8px 8px 20px var(--shadow-dark), -8px -8px 20px var(--shadow-light);
+      transition: transform 0.2s;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .portfolio-card img {
+      width: 100%;
+      border-radius: 1rem;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 0.7rem;
+    }
+
+    .portfolio-card h4 {
+      margin-bottom: 0.3rem;
+      font-size: 1.1rem;
+      color: var(--primary);
+    }
+
+    .portfolio-card p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-logo">StudyPulse</div>
+    <ul class="nav-menu">
+      <li><a href="#home"><i class="uil uil-home-alt"></i>Home</a></li>
+      <li><a href="#services"><i class="uil uil-briefcase"></i>Services</a></li>
+      <li><a href="#about"><i class="uil uil-user"></i>About</a></li>
+      <li><a href="#contact"><i class="uil uil-envelope"></i>Contact</a></li>
+      <li><a href="login.html"><i class="uil uil-signin"></i>Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sections -->
+  <section id="home">
+    <h2 class="section-title">Welcome to Studpulse</h2>
+    <p class="section-desc"></p>
+  </section>
+
+  <section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-desc">We offer student performance monitoring, login portals, grade input interfaces, and much more.</p>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
+    <p class="section-desc"></p>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact </h2>
+    <p class="section-desc">The developer</p>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <img src="" alt="">
+        <h4>dv1</h4>
+        <p></p>
+      </div>
+      <div class="portfolio-card">
+        <img src="" alt="">
+        <h4>dv2</h4>
+      </div>
+      <div class="portfolio-card">
+        <img src="" alt="">
+        <h4></h4>
+        <p>dv3.</p>
+      </div>
+      <div class="portfolio-card">
+        <img src="" alt="">
+        <h4>d4</h4>
+        <p></p>
+      </div>
+      <div class="portfolio-card">
+        <img src="" alt="">
+        <h4>dv5</h4>
+        <p></p>
+      </div>
+    </div>
+  </section>
+
+
+    </div>
+  </section>
+  <script>
+    document.getElementById('signinBtn').addEventListener('click', function() {
+      // For demo: simple redirect on button click.
+      // Could add validation here later.
+      window.location.href = 'dashboard.html';
+    });
+    // Optional: allow enter key to trigger sign-in
+    document.querySelectorAll('#username, #password').forEach(input => {
+      input.addEventListener('keyup', function(event) {
+        if (event.key === 'Enter') {
+          document.getElementById('signinBtn').click();
+        }
+      });
+    });
+  </script>
+</script>
+</body>
+</html>
