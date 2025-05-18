@@ -88,88 +88,6 @@
       max-width: 600px;
       text-align: center;
     }
-
-    /* Login Section */
-    #login .login-card {
-      background: var(--card);
-      padding: 2rem;
-      border-radius: 2rem;
-      box-shadow: 10px 10px 25px var(--shadow-dark), -10px -10px 25px var(--shadow-light);
-      max-width: 400px;
-      width: 100%;
-      text-align: center;
-    }
-
-    #login input {
-      width: 100%;
-      padding: 0.9rem;
-      margin-bottom: 1rem;
-      border: none;
-      border-radius: 1rem;
-      background: #f0f2f5;
-      box-shadow: inset 2px 2px 5px #d1d9e6, inset -2px -2px 5px #ffffff;
-    }
-
-    #login button {
-      width: 100%;
-      padding: 0.9rem;
-      border: none;
-      border-radius: 1rem;
-      background: var(--primary);
-      color: white;
-      font-weight: bold;
-      font-size: 1rem;
-      box-shadow: 0 6px 20px rgba(79, 70, 229, 0.3);
-      cursor: pointer;
-    }
-
-    /* Portfolio Section */
-    #contact .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-      width: 100%;
-      max-width: 1200px;
-    }
-
-    .portfolio-card {
-      background: var(--card);
-      border-radius: 1.5rem;
-      padding: 1rem;
-      box-shadow: 8px 8px 20px var(--shadow-dark), -8px -8px 20px var(--shadow-light);
-      transition: transform 0.2s;
-    }
-
-    .portfolio-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .portfolio-card img {
-      width: 100%;
-      border-radius: 1rem;
-      height: 150px;
-      object-fit: cover;
-      margin-bottom: 0.7rem;
-    }
-
-    .portfolio-card h4 {
-      margin-bottom: 0.3rem;
-      font-size: 1.1rem;
-      color: var(--primary);
-    }
-
-    .portfolio-card p {
-      font-size: 0.9rem;
-      color: #666;
-    }
-
-    @media (max-width: 768px) {
-      .nav-menu {
-        flex-direction: column;
-        gap: 1rem;
-      }
-    }
   </style>
 </head>
 <body>
@@ -183,63 +101,15 @@
       <li><a href="#about"><i class="uil uil-user"></i>About</a></li>
       <li><a href="#contact"><i class="uil uil-envelope"></i>Contact</a></li>
       <li><a href="login.html"><i class="uil uil-signin"></i>Login</a></li>
+      <li><a href="logout.php"><i class="uil uil-signout"></i>Logout</a></li> <!-- Added Logout Button -->
     </ul>
   </nav>
 
-
-  <!-- Sections -->
-  <section id="home">
-    <h2 class="section-title">Welcome to Studpulse</h2>
-    <p class="section-desc"></p>
-  </section>
-
-  <section id="services">
-    <h2 class="section-title">Our Services</h2>
-    <p class="section-desc">We offer student performance monitoring, login portals, grade input interfaces, and much more.</p>
-  </section>
-
-  <section id="About">
-    <h2 class="section-title">Developer </h2>
-    <p class="section-desc">The developer</p>
-
-    <div class="portfolio-grid">
-      <div class="portfolio-card">
-        <img src="" alt="">
-        <h4>dv1</h4>
-        <p></p>
-      </div>
-      <div class="portfolio-card">
-        <img src="" alt="">
-        <h4>dv2</h4>
-      </div>
-      <div class="portfolio-card">
-        <img src="" alt="">
-        <h4></h4>
-        <p>dv3.</p>
-      </div>
-      <div class="portfolio-card">
-        <img src="" alt="">
-        <h4>d4</h4>
-        <p></p>
-      </div>
-      <div class="portfolio-card">
-        <img src="" alt="">
-        <h4>dv5</h4>
-        <p></p>
-      </div>
-    </div>
-  </section>
-
-
-    </div>
-  </section>
   <script>
     document.getElementById('signinBtn').addEventListener('click', function() {
-      // For demo: simple redirect on button click.
-      // Could add validation here later.
       window.location.href = 'dashboard.html';
     });
-    // Optional: allow enter key to trigger sign-in
+
     document.querySelectorAll('#username, #password').forEach(input => {
       input.addEventListener('keyup', function(event) {
         if (event.key === 'Enter') {
@@ -248,6 +118,6 @@
       });
     });
   </script>
-</script>
+
 </body>
 </html>
