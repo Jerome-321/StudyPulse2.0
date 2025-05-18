@@ -8,6 +8,7 @@ $_SESSION = [];
 session_destroy();
 
 // Redirect the user to the login page
-header("Location: /path/to/login.html"); // Adjust the path based on where your login file is located
+header("Location: login.php"); // If you're using a PHP login script instead
+
 exit();
 ?>
